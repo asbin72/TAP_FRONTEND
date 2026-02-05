@@ -8,59 +8,102 @@
 <body>
     <h2>Course Registration Form</h2>
 
-    Personal <Details></Details>
     <form action="">
-        <label for="fname">First Name:</label>
-        <input type="text" name="fname" id="fname" placeholder="Enter your first name" required><br><br>
-        <label for="sname">Surname:</label>
-        <input type="text" name="sname" id="sname" placeholder="Enter your surname" required><br><br>
-        <label for="mobno">Mobile Number:</label>
-        <input type="tel" name="mobno" id="mobno" placeholder="Enter your mobile number" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email" required><br><br>
-        <label for="pass">Password:</label>
-        <input type="password" name="pass" id="pass" placeholder="Enter your password" required><br><br>
-        <label for="confpass">Confirm Password:</label>
-        <input type="password" name="confpass" id="confpass" placeholder="Confirm your password" required><br><br>
-        <label for="dob">DOB</label>
-        <input type="date" name="dob" id="dob" required><br><br> 
-        <label for="age">Age:</label>
-        <input type="number" name="age" id="age" min="18" max="70" placeholder="Enter your age" required>
-        <input type="submit" value="Submit"><br><br>
-        <label for="gender">Gender:</label>
-        <input type="radio" name="gender" value="male" required><label for="male">Male</label>
-        <input type="radio" name="gender" value="female" required><label for="female">Female</label>
-        <input type="radio" name="gender" value="other" required><label for="other">Other</label><br><br>   
-        <label for="selection">Select Country:</label>
-        <select name="selection" required>
-            <option value="">Select your country</option>
-            <option value="india">India</option>
-            <option value="usa">USA</option>
-            <option value="uk">UK</option>
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option></select><br><br>
-        <label for="upload">Upload Photo:</label>
-        <input type="file" id="upload" name="upload" accept="image/*"><br><br>
-        <input type="reset" value="Reset"><br><br>
+         <fieldset>
+            <table>
+                <legend>Personal Details</legend>
+        <tr>
+            <td><label for="fname">First Name:</label></td>
+            <td><input type="text" name="fname" id="fname" placeholder="Enter your first name" required></td>
+        </tr>
+        <tr>
+            <td><label for="sname">Surname:</label></td>
+            <td><input type="text" name="sname" id="sname" placeholder="Enter your surname" required></td>
+        </tr>
+        <tr>
+            <td><label for="mobno">Mobile Number:</label></td>
+            <td><input type="tel" name="mobno" id="mobno" placeholder="Enter your mobile number" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" name="email" id="email" placeholder="Enter your email" required></td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password:</label></td>
+            <td><input type="password" name="pass" id="pass" placeholder="Enter your password" required></td>
+        </tr>
+        <tr>
+            <td><label for="confpass">Confirm Password:</label></td>
+            <td><input type="password" name="confpass" id="confpass" placeholder="Confirm your password" required></td>
+        </tr>
+        <tr>
+            <td><label for="dob">DOB</label></td>
+            <td><input type="date" name="dob" id="dob" required></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number" name="age" id="age" min="18" max="70" placeholder="Enter age" required><input type="submit" value="Submit"></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender:</label></td>
+            <td><input type="radio" name="gender" value="male" required><label for="male">Male</label>
+                <input type="radio" name="gender" value="female" required><label for="female">Female</label>
+                <input type="radio" name="gender" value="other" required><label for="other">Other</label></td>
+        </tr>
+        <tr>
+            <td><label for="selection">Select Country:</label></td>
+            <td><select name="selection" required>
+                <option value="">Select your country</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option></select></td>
+        </tr>
+        <tr>
+            <td><label for="upload">Upload Photo:</label></td>
+            <td><input type="file" id="upload" name="upload" accept="image/*"></td>
+        </tr>
+        <tr>
+            </fieldset>
+            <td> <input type="reset" value="Reset"> <input type="submit" value="Submit"></td>
 
-        Course selection
+        </tr></table></fieldset>
 
-        <label for="Course">Select Course:</label>
-        <select name="Course" id="Course" required>
-            <option value="">Select a course</option>
-            <option value="webdev">Web Development</option>
-            <option value="data-science">Data Science</option>
-            <option value="mobile-dev">Mobile Development</option>
-        </select><br><br>
-        <label for="mode">Delivery Mode:</label>
-        <input type="radio" name="mode" value="online" required><label for="online">Online</label>
-        <input type="radio" name="mode" value="offline" required><label for="offline">Offline</label><br><br>
-        <label for="ins">Institute Name:</label>
-        <input type="text" name="ins" id="ins" placeholder="Enter institute name" required><br><br>
-        <label for="level">Current Coding Level:</label>
-        <input type="range" name="level" id="level" min="1" max="10" required><br><br>
-        <label for="com">Comments:</label>
-        <textarea name="com" id="com" placeholder="Enter any comments"></textarea><br><br>
+        <fieldset>
+            <legend>Course Selection</legend>
+            <table>
+
+        <tr>
+            <td><label for="Course">Select Course:</label></td>
+            <td><select name="Course" id="Course" required>
+                <option value="">Select a course</option>
+                <option value="webdev">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="mobile-dev">Mobile Development</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="mode">Delivery Mode:</label></td>
+            <td><input type="radio" name="mode" value="online" required><label for="online">Online</label>
+                <input type="radio" name="mode" value="offline" required><label for="offline">Offline</label></td>
+        </tr>
+        <tr>
+            <td><label for="ins">Institute Name:</label></td>
+            <td><input type="text" name="ins" id="ins" placeholder="Enter institute name" required></td>
+        </tr>
+        <tr>
+            <td><label for="level">Current Coding Level:</label></td>
+            <td><input type="range" name="level" id="level" min="1" max="10" required></td>
+        </tr>
+        <tr>
+            <td><label for="com">Comments:</label></td>
+            <td><textarea name="com" id="com" placeholder="Enter any comments"></textarea></td>
+        </tr>
+        </table>
+        </fieldset>
+        
+
     </form>
     
 </body>
