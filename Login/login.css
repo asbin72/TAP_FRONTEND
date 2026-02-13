@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Google Sans", sans-serif;
+    background-color: black;
+    color: white;
+}
+h1{
+    color: white;
+    text-align: center;
+    background: linear-gradient(to right, blue, black 70%);
+    padding: 25px;
+    width: 30%;
+    margin: 50px auto;
+    border: 3px solid blue;
+    border-radius: 25px;
+    box-shadow: 10px 10px 50px rgb(23, 23, 230);
+    transition: all 0.3s ease-in;
+}
+h1:hover{
+    transform: scale(1.03) translateY(-3px);
+    transition: transform 0.3s ease-in-out;
+}

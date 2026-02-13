@@ -3,108 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h2>Course Registration Form</h2>
+    <header>
+        <h1>Course Registration Form</h1>
+    </header>
 
-    <form action="">
-         <fieldset>
-            <table>
-                <legend>Personal Details</legend>
-        <tr>
-            <td><label for="fname">First Name:</label></td>
-            <td><input type="text" name="fname" id="fname" placeholder="Enter your first name" required></td>
-        </tr>
-        <tr>
-            <td><label for="sname">Surname:</label></td>
-            <td><input type="text" name="sname" id="sname" placeholder="Enter your surname" required></td>
-        </tr>
-        <tr>
-            <td><label for="mobno">Mobile Number:</label></td>
-            <td><input type="tel" name="mobno" id="mobno" placeholder="Enter your mobile number" required></td>
-        </tr>
-        <tr>
-            <td><label for="email">Email:</label></td>
-            <td><input type="email" name="email" id="email" placeholder="Enter your email" required></td>
-        </tr>
-        <tr>
-            <td><label for="pass">Password:</label></td>
-            <td><input type="password" name="pass" id="pass" placeholder="Enter your password" required></td>
-        </tr>
-        <tr>
-            <td><label for="confpass">Confirm Password:</label></td>
-            <td><input type="password" name="confpass" id="confpass" placeholder="Confirm your password" required></td>
-        </tr>
-        <tr>
-            <td><label for="dob">DOB</label></td>
-            <td><input type="date" name="dob" id="dob" required></td>
-        </tr>
-        <tr>
-            <td><label for="age">Age:</label></td>
-            <td><input type="number" name="age" id="age" min="18" max="70" placeholder="Enter age" required><input type="submit" value="Submit"></td>
-        </tr>
-        <tr>
-            <td><label for="gender">Gender:</label></td>
-            <td><input type="radio" name="gender" value="male" required><label for="male">Male</label>
-                <input type="radio" name="gender" value="female" required><label for="female">Female</label>
-                <input type="radio" name="gender" value="other" required><label for="other">Other</label></td>
-        </tr>
-        <tr>
-            <td><label for="selection">Select Country:</label></td>
-            <td><select name="selection" required>
-                <option value="">Select your country</option>
-                <option value="india">India</option>
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option></select></td>
-        </tr>
-        <tr>
-            <td><label for="upload">Upload Photo:</label></td>
-            <td><input type="file" id="upload" name="upload" accept="image/*"></td>
-        </tr>
-        <tr>
-            </fieldset>
-            <td> <input type="reset" value="Reset"> <input type="submit" value="Submit"></td>
+    <main>
+        <form action="" method="POST">
+            <!-- Personal Details Section -->
+            <section>
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sname">Surname:</label>
+                        <input type="text" name="sname" id="sname" placeholder="Enter your surname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobno">Mobile Number:</label>
+                        <input type="tel" name="mobno" id="mobno" placeholder="Enter your mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password:</label>
+                        <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confpass">Confirm Password:</label>
+                        <input type="password" name="confpass" id="confpass" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" min="18" max="70" placeholder="Enter age" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div class="radio-group">
+                            <input type="radio" name="gender" id="male" value="male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female" value="female" required>
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" id="other" value="other" required>
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selection">Select Country:</label>
+                        <select name="selection" id="selection" required>
+                            <option value="">Select your country</option>
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="upload">Upload Photo:</label>
+                        <input type="file" id="upload" name="upload" accept="image/*">
+                    </div>
+                </fieldset>
+            </section>
 
-        </tr></table></fieldset>
+            <!-- Course Selection Section -->
+            <section>
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    <div class="form-group">
+                        <label for="course">Select Course:</label>
+                        <select name="course" id="course" required>
+                            <option value="">Select a course</option>
+                            <option value="webdev">Web Development</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="mobile-dev">Mobile Development</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Mode:</label>
+                        <div class="radio-group">
+                            <input type="radio" name="mode" id="online" value="online" required>
+                            <label for="online">Online</label>
+                            <input type="radio" name="mode" id="offline" value="offline" required>
+                            <label for="offline">Offline</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ins">Institute Name:</label>
+                        <input type="text" name="ins" id="ins" placeholder="Enter institute name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="level">Current Coding Level:</label>
+                        <input type="range" name="level" id="level" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="com">Comments:</label>
+                        <textarea name="com" id="com" placeholder="Enter any comments"></textarea>
+                    </div>
+                </fieldset>
+            </section>
 
-        <fieldset>
-            <legend>Course Selection</legend>
-            <table>
+            <!-- Form Actions -->
+            <footer class="form-actions">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </footer>
+        </form>
+    </main>
 
-        <tr>
-            <td><label for="Course">Select Course:</label></td>
-            <td><select name="Course" id="Course" required>
-                <option value="">Select a course</option>
-                <option value="webdev">Web Development</option>
-                <option value="data-science">Data Science</option>
-                <option value="mobile-dev">Mobile Development</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td><label for="mode">Delivery Mode:</label></td>
-            <td><input type="radio" name="mode" value="online" required><label for="online">Online</label>
-                <input type="radio" name="mode" value="offline" required><label for="offline">Offline</label></td>
-        </tr>
-        <tr>
-            <td><label for="ins">Institute Name:</label></td>
-            <td><input type="text" name="ins" id="ins" placeholder="Enter institute name" required></td>
-        </tr>
-        <tr>
-            <td><label for="level">Current Coding Level:</label></td>
-            <td><input type="range" name="level" id="level" min="1" max="10" required></td>
-        </tr>
-        <tr>
-            <td><label for="com">Comments:</label></td>
-            <td><textarea name="com" id="com" placeholder="Enter any comments"></textarea></td>
-        </tr>
-        </table>
-        </fieldset>
-        
-
-    </form>
-    
 </body>
 </html>
